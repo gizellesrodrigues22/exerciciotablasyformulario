@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuarios</title>
+
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background-color: #ffffff;
+      color: #2c2c2c;
+      padding: 40px;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.6rem;
+      font-weight: normal;
+    }
+
+    .contenedor {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    /* TABLA */
+    .seccion-tabla {
+      flex: 3;
+    }
+
+    .seccion-tabla h2 {
+      font-size: 1rem;
+      font-weight: normal;
+      margin-bottom: 12px;
+      color: #555;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    th {
+      border: 1px solid #aaa;
+      padding: 10px 14px;
+      text-align: left;
+      background-color: #f0f0f0;
+    }
+
+    td {
+      border: 1px solid #aaa;
+      padding: 10px 14px;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f7f7f7;
+    }
+
+    /* FORMULARIO */
+    .seccion-formulario {
+      flex: 2;
+    }
+
+    .seccion-formulario h2 {
+      font-size: 1rem;
+      font-weight: normal;
+      margin-bottom: 16px;
+      color: #555;
+    }
+
+    .campo {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.88rem;
+      margin-bottom: 5px;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      background-color: #fafafa;
+      font-family: Georgia, serif;
+      font-size: 0.88rem;
+      color: #2c2c2c;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #555;
+    }
+
+    .grupo-radio {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .grupo-radio label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.88rem;
+      color: #2c2c2c;
+      cursor: pointer;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      background-color: #444;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      font-family: Georgia, serif;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #222;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Registro de Usuarios</h1>
+
+  <div class="contenedor">
+
+    <!-- TABLA (izquierda) -->
+    <section class="seccion-tabla">
+      <h2>Usuarios registrados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Fecha de nacimiento</th>
+            <th>Género</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Gizelle S Rodrigues</td>
+            <td>gizellesrodrigues@gmail.com</td>
+            <td>02/12/1900</td>
+            <td>Mujer</td>
+          </tr>
+          <tr>
+            <td>Sergio F Alvarez</td>
+            <td>sergiyo@gmail.com</td>
+            <td>27/06/1900</td>
+            <td>Hombre</td>
+          </tr>
+          <tr>
+            <td>Antonella F Silva</td>
+            <td>antonellafs@gmail.com</td>
+            <td>21/11/1900</td>
+            <td>Mujer</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- FORMULARIO (derecha) -->
+    <section class="seccion-formulario">
+      <h2>Añadir usuario</h2>
+      <form action="#" method="post">
+
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+        </div>
+
+        <div class="campo">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+        </div>
+
+        <div class="campo">
+          <label for="fecha">Fecha de nacimiento</label>
+          <input type="date" id="fecha" name="fecha_nacimiento" required>
+        </div>
+
+        <div class="campo">
+          <label>Género</label>
+          <div class="grupo-radio">
+            <label><input type="radio" name="genero" value="mujer" required> Mujer</label>
+            <label><input type="radio" name="genero" value="hombre"> Hombre</label>
+            <label><input type="radio" name="genero" value="otro"> Otro</label>
+          </div>
+        </div>
+
+        <button type="submit">Enviar</button>
+
+      </form>
+    </section>
+
+  </div>
+
+</body>
+</html>
